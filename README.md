@@ -2,7 +2,7 @@ Document Foo
 ============
 
 Written as a result of a bet. Creating a document management system
-from scratch is possible without Rails. Here's the proof.
+within a day from scratch is possible without Rails. Here's the proof.
 
 Technical Details
 -----------------
