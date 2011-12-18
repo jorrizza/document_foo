@@ -1,0 +1,42 @@
+<div class="page-header">
+  <h1>Users <small>All the users in the system</small></h1>
+</div>
+<div class="row">
+  <div class="span4">
+    <h3>These are your users</h3>
+    <p>
+      You can edit them, look at them or delete them. Just whatever
+      you want. We don't want to keep you from doing anything at
+      all. We're the good guys. We love you.
+    </p>
+    <div class="span4 offset12">
+      <a href="/users/new" class="btn primary">Add a user</a>
+    </div>
+  </div>
+  <div class="span12">
+    <table>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Role</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+        <tr>
+          <td><%= user.username %></td>
+          <td><%= user.role %></td>
+          <td>
+            <a href="/users/edit/<%= user._id %>">Edit</a>
+            <% unless user.username == 'admin' %>
+            /
+            <a class="dellink" href="/users/delete/<%= user._id %>">Delete</a>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

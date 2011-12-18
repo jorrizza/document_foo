@@ -1,0 +1,22 @@
+<div class="page-header">
+  <h1>Documents <small>Edit a document</small></h1>
+</div>
+<form method="POST" enctype="multipart/form-data">
+  <div class="row">
+    <div class="span4">
+      <h3>Total control</h3>
+      Yes. You've seen this correctly. Not only do we enable you to
+      upload your files, you can edit them as well! Aren't you amazed
+      right now? We are. So just go ahead and change some of those
+      dials and switches. We'll make sure it doesn't explode.
+    </div>
+    <div class="span12">
+      <%= erb :documents_form %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span4 offset10">
+      <input type="submit" value="Update" class="btn primary">
+    </div>
+  </div>
+</form>

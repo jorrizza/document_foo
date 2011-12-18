@@ -1,0 +1,42 @@
+<div class="page-header">
+  <h1>Documents <small>Your documents, managable</small></h1>
+</div>
+<div class="row">
+  <div class="span4">
+    <h3>Hooray for documents!</h3>
+    <p>
+      Have everything, your entire life and that of others, stored
+      safely away in this document collection. We promise not to share
+      these documents with anyone else. Honest.
+    </p>
+    <div class="span4 offset12">
+      <a href="/documents/new" class="btn primary">Add a document</a>
+    </div>
+  </div>
+  <div class="span12">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Owner</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @documents.each do |doc| %>
+        <tr>
+          <td><a href="/documents/download/<%= doc._id %>"><%= h doc.name %></a></td>
+          <td><%= doc.created_at.strftime('%d-%m-%Y') %></td>
+          <td><%= h doc.user.username %></td>
+          <td>
+            <a href="/documents/edit/<%= doc._id %>">Edit</a>
+            /
+            <a class="dellink" href="/documents/delete/<%= doc._id %>">Delete</a>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

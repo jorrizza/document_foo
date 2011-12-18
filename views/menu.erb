@@ -1,0 +1,7 @@
+<li><a href="/home">Home</a></li>
+<% if is_admin? %>
+<li><a href="/users">Users</a></li>
+<% end %>
+<% if logged_in? %>
+<li><a href="/documents">Documents</a></li>
+<% end %>

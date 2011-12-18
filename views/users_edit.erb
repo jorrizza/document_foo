@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1>Users <small>Edit the user <%= h @user.username %></small></h1>
+</div>
+<form method="POST">
+  <div class="row">
+    <div class="span4">
+      <h3>Let's edit a user!</h3>
+      Editing a user is very much like adding a user, but in this case
+      we, you know, don't create a new one. Jeesh. I thought you
+      understood that.
+    </div>
+    <div class="span12">
+      <%= erb :users_form %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span4 offset10">
+      <input type="submit" value="Save" class="btn primary">
+    </div>
+  </div>
+</form>
