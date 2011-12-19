@@ -12,7 +12,7 @@
     <div class="input">
       <select class="xlarge" id="owner" name="owner">
         <% @owners.each do |pwn| %>
-        <option<%= " selected" if @document.user && pwn == @document.user.username %>><%= pwn %></option>
+        <option<%= " selected" if @document.user && pwn == @document.user.username %>><%= h pwn %></option>
         <% end %>
       </select>
     </div>

@@ -37,7 +37,7 @@
       <select class="xlarge" id="accountant" name="accountant">
         <option value="">No accountant</option>
         <% @accountants.each do |acc| %>
-        <option<%= " selected" if @user.accountant && @user.accountant.username == acc %>><%= acc %></option>
+        <option<%= " selected" if @user.accountant && @user.accountant.username == acc %>><%= h acc %></option>
         <% end %>
       </select>
     </div>

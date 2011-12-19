@@ -25,7 +25,7 @@
       <tbody>
         <% @users.each do |user| %>
         <tr>
-          <td><%= user.username %></td>
+          <td><%= h user.username %></td>
           <td><%= user.role %></td>
           <td>
             <a href="/users/edit/<%= user._id %>">Edit</a>
