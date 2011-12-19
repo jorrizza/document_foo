@@ -92,6 +92,8 @@ get '/documents/download/:id' do
   headers('Content-Type' => file.content_type,
           'Content-Disposition' => "attachment; filename=\"#{file.filename}\"")
 
+  return '' if file.file_length == 0
+
   while data = file.read(10240)
     response.write data
   end
