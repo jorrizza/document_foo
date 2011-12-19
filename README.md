@@ -9,6 +9,11 @@ Technical Details
 
 Uses Sinatra, Twitter Bootstrap, jQuery, Mongoid and Mongo's GridFS.
 
+Limitations
+-----------
+
+You can't use "stupiddefault" as a password.
+
 License
 -------
 
